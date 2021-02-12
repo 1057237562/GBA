@@ -176,182 +176,6 @@
 </div>
 
 </div>
-    
-        
-          <!--SSI /frags/licensee_stats_site_navigation.html -->
-          <!-- Start Licensee Stats Site Navigation Fragment -->
-
-<!-- End Licensee Stats Site Navigation Fragment  -->       
-        </div>         
-
-        <div class="container" id="main-container">
-            
-          <div class="row container-row">
-          
-            <div class="col-xl-2 visible-xl text-right content-aside content-aside-left" data-ng-hide="mobileAppViewMode">
-  						<!--SSI /frags/licensee_ad_left.html -->
-  						<!-- Start licensee_ad_left -->
-
-<!--add some content to preserve layout-->
-&nbsp;
-
-<!-- End licensee_add_left -->                
-            </div>  <!-- /page-wrapper -->
-  
-            <div class="col-xl-8 col-lg-12 content-container">
-            
-              <div class="content-container-top" data-ng-show="showNav">                         
-                <!--SSI /frags/licensee_content_top_promos.html -->
-                <!-- Start Licensee Content Top Promos Fragment -->
-<!-- End Licensee Content Top Promos Fragment -->                  
-              </div>
-  
-              <div class="content">
-                <!-- Start content -->
-                  <section class="player-index">
-  <div data-ng-controller="CurrentPlayerIndexController" class="ng-scope">
-      <sib-page-header data-sib-title="_page.playerIndex"></sib-page-header>
-      <div class="row">
-          <div class="container" id="main-container">
-            
-          <div class="row container-row">
-          
-            <div class="col-xl-2 visible-xl text-right content-aside content-aside-left" data-ng-hide="mobileAppViewMode">
-  						<!--SSI /frags/licensee_ad_left.html -->
-  						<!-- Start licensee_ad_left -->
-
-<!--add some content to preserve layout-->
-&nbsp;
-
-<!-- End licensee_add_left -->                
-            </div>  <!-- /page-wrapper -->
-  
-            <div class="col-xl-8 col-lg-12 content-container">
-            
-              <div class="content-container-top" data-ng-show="showNav">                         
-                <!--SSI /frags/licensee_content_top_promos.html -->
-                <!-- Start Licensee Content Top Promos Fragment -->
-<!-- End Licensee Content Top Promos Fragment -->                  
-              </div>
-  
-              <div class="content">
-                <!-- Start content -->
-                  <section class="player-index">
-  <div data-ng-controller="CurrentPlayerIndexController" class="ng-scope">
-      <sib-page-header data-sib-title="_page.playerIndex"><div class="page-header ng-scope" data-ng-show="showNav"><div class="content-left"><span class="breadcrumb ng-binding"><a href="/"><span data-ng-i18next="_page.home">首页</span></a> / 球员 </span><h1 class="page-title ng-binding">球员 </h1></div><div class="content-right"></div></div></sib-page-header>
-      <div class="row">
-      <div class="col-sm-12">
-        
-        <!-- Table Start -->
-<div class="sib-table-container sib-table-player-index">
-  <div data-ng-hide="history" class="">
-    <div class="search-input current hidden-sm">
-      <div class="close-btn ng-hide" data-ng-click="search = ''; changeInitial('A')" data-ng-show="search.length>0"></div>
-      <input type="text" name="player-search" placeholder="根据球员姓名查找" data-ng-model="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" data-ng-change="searchPlayers()" class="ng-pristine ng-untouched ng-valid">
-    </div>
-  </div> 
-  <div data-ng-show="history" class="ng-hide">
-    <div class="search-input history show-all-sites hidden-zh hidden-cn hidden-kr hidden-jp">
-      <div class="close-btn ng-hide" data-ng-click="closeBtn()" data-ng-show="search.length>0"></div>
-      <input type="text" name="player-search" placeholder="根据球员姓名查找" data-ng-model="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" data-ng-keydown="searchPlayers($event)" class="ng-pristine ng-untouched ng-valid">
-    </div>
-    <div class="search-button show-all-sites hidden-zh hidden-cn hidden-kr hidden-jp" data-ng-click="searchPlayers()" data-ng-i18next="historicalPlayerIndex.go">提交</div> 
-  </div>
-  
-  <div class="table-title">
-    <div class="title">
-      <span data-ng-i18next="playerIndex.title">球员</span>
-    </div>
-    
-    <div class="row sub-header-wrap name">
-      
-      <div class="visible-sm col-sm-9 col-lg-10 letter-filter-wrap">
-        <select id="letterFilter" class="letter-filter ng-pristine ng-untouched ng-valid" name="letter-filter" data-ng-model="activeInitial" data-ng-change="changeInitial(activeInitial)">
-          <option value="all" class="visible-sm" data-ng-i18next="playerIndex.filterByName" data-ng-hide="history">根据球员姓查找</option>
-          <option value="A">A</option>
-          <option value="B">B</option>
-          <option value="C">C</option>
-          <option value="D">D</option>
-          <option value="E">E</option>
-          <option value="F">F</option>
-          <option value="G">G</option>
-          <option value="H">H</option>
-          <option value="I">I</option>
-          <option value="J">J</option>
-          <option value="K">K</option>
-          <option value="L">L</option>
-          <option value="M">M</option>
-          <option value="N">N</option>
-          <option value="O">O</option>
-          <option value="P">P</option>
-          <option value="Q">Q</option>
-          <option value="R">R</option>
-          <option value="S">S</option>
-          <option value="T">T</option>
-          <option value="U">U</option>
-          <option value="V">V</option>
-          <option value="W">W</option>
-          <option value="X">X</option>
-          <option value="Y">Y</option>
-          <option value="Z">Z</option>
-        </select>
-      </div>
-      
-      <div class="hidden-sm col-sm-9 col-lg-10 letters-wrap">
-        <div data-ng-class="{active: activeInitial == 'A' &amp;&amp; !search}" data-ng-click="changeInitial('A')" class="active">a</div>
-        <div data-ng-class="{active: activeInitial == 'B' &amp;&amp; !search}" data-ng-click="changeInitial('B')">b</div>
-        <div data-ng-class="{active: activeInitial == 'C' &amp;&amp; !search}" data-ng-click="changeInitial('C')">c</div>
-        <div data-ng-class="{active: activeInitial == 'D' &amp;&amp; !search}" data-ng-click="changeInitial('D')">d</div>
-        <div data-ng-class="{active: activeInitial == 'E' &amp;&amp; !search}" data-ng-click="changeInitial('E')">e</div>
-        <div data-ng-class="{active: activeInitial == 'F' &amp;&amp; !search}" data-ng-click="changeInitial('F')">f</div>
-        <div data-ng-class="{active: activeInitial == 'G' &amp;&amp; !search}" data-ng-click="changeInitial('G')">g</div>
-        <div data-ng-class="{active: activeInitial == 'H' &amp;&amp; !search}" data-ng-click="changeInitial('H')">h</div>
-        <div data-ng-class="{active: activeInitial == 'I' &amp;&amp; !search}" data-ng-click="changeInitial('I')">i</div>
-        <div data-ng-class="{active: activeInitial == 'J' &amp;&amp; !search}" data-ng-click="changeInitial('J')">j</div>
-        <div data-ng-class="{active: activeInitial == 'K' &amp;&amp; !search}" data-ng-click="changeInitial('K')">k</div>
-        <div data-ng-class="{active: activeInitial == 'L' &amp;&amp; !search}" data-ng-click="changeInitial('L')">l</div>
-        <div data-ng-class="{active: activeInitial == 'M' &amp;&amp; !search}" data-ng-click="changeInitial('M')">m</div>
-        <div data-ng-class="{active: activeInitial == 'N' &amp;&amp; !search}" data-ng-click="changeInitial('N')">n</div>
-        <div data-ng-class="{active: activeInitial == 'O' &amp;&amp; !search}" data-ng-click="changeInitial('O')">o</div>
-        <div data-ng-class="{active: activeInitial == 'P' &amp;&amp; !search}" data-ng-click="changeInitial('P')">p</div>
-        <div data-ng-class="{active: activeInitial == 'Q' &amp;&amp; !search}" data-ng-click="changeInitial('Q')">q</div>
-        <div data-ng-class="{active: activeInitial == 'R' &amp;&amp; !search}" data-ng-click="changeInitial('R')">r</div>
-        <div data-ng-class="{active: activeInitial == 'S' &amp;&amp; !search}" data-ng-click="changeInitial('S')">s</div>
-        <div data-ng-class="{active: activeInitial == 'T' &amp;&amp; !search}" data-ng-click="changeInitial('T')">t</div>
-        <div data-ng-class="{active: activeInitial == 'U' &amp;&amp; !search}" data-ng-click="changeInitial('U')">u</div>
-        <div data-ng-class="{active: activeInitial == 'V' &amp;&amp; !search}" data-ng-click="changeInitial('V')">v</div>
-        <div data-ng-class="{active: activeInitial == 'W' &amp;&amp; !search}" data-ng-click="changeInitial('W')">w</div>
-        <div data-ng-class="{active: activeInitial == 'X' &amp;&amp; !search}" data-ng-click="changeInitial('X')">x</div>
-        <div data-ng-class="{active: activeInitial == 'Y' &amp;&amp; !search}" data-ng-click="changeInitial('Y')">y</div>
-        <div data-ng-class="{active: activeInitial == 'Z' &amp;&amp; !search}" data-ng-click="changeInitial('Z')">z</div>
-      </div>
-    </div>
-    
-    <!-- ngInclude: formSrc --><div data-ng-include="formSrc" class="player-index__form ng-scope"><div class="row sub-header-wrap player-index-header ng-scope">
-  <div class="col-sm-9 col-lg-6 player-index-header-filter-wrap">
-    <span class="select-moz-player-index">
-      <select class="player-index-header-filter ng-pristine ng-untouched ng-valid" name="country-filter" data-ng-model="$parent.country" data-ng-change="onCountrySelect()" data-ng-options="country.display as country.display for country in countries | filter:{value: '!Non United States'}"><option label="以国籍筛选" value="string:以国籍筛选" selected="selected">以国籍筛选</option><option label="安哥拉" value="string:安哥拉">安哥拉</option><option label="阿根廷" value="string:阿根廷">阿根廷</option><option label="澳洲" value="string:澳洲">澳洲</option><option label="奥地利" value="string:奥地利">奥地利</option><option label="巴哈马" value="string:巴哈马">巴哈马</option><option label="Bosnia and Herzegovina" value="string:Bosnia and Herzegovina">Bosnia and Herzegovina</option><option label="巴西" value="string:巴西">巴西</option><option label="喀麦隆" value="string:喀麦隆">喀麦隆</option><option label="加拿大" value="string:加拿大">加拿大</option><option label="克罗地亚" value="string:克罗地亚">克罗地亚</option><option label="捷克共和国" value="string:捷克共和国">捷克共和国</option><option label="刚果民主共和国" value="string:刚果民主共和国">刚果民主共和国</option><option label="多明尼加共和国" value="string:多明尼加共和国">多明尼加共和国</option><option label="埃及" value="string:埃及">埃及</option><option label="芬兰" value="string:芬兰">芬兰</option><option label="法国" value="string:法国">法国</option><option label="Gabon" value="string:Gabon">Gabon</option><option label="格鲁吉亚" value="string:格鲁吉亚">格鲁吉亚</option><option label="德国" value="string:德国">德国</option><option label="希腊" value="string:希腊">希腊</option><option label="Guinea" value="string:Guinea">Guinea</option><option label="以色列" value="string:以色列">以色列</option><option label="意大利" value="string:意大利">意大利</option><option label="牙买加" value="string:牙买加">牙买加</option><option label="Japan" value="string:Japan">Japan</option><option label="拉脱维亚" value="string:拉脱维亚">拉脱维亚</option><option label="立陶宛" value="string:立陶宛">立陶宛</option><option label="黑山" value="string:黑山">黑山</option><option label="新西兰" value="string:新西兰">新西兰</option><option label="尼日利亚" value="string:尼日利亚">尼日利亚</option><option label="Republic of the Congo" value="string:Republic of the Congo">Republic of the Congo</option><option label="Saint Lucia" value="string:Saint Lucia">Saint Lucia</option><option label="塞内加尔" value="string:塞内加尔">塞内加尔</option><option label="塞尔维亚" value="string:塞尔维亚">塞尔维亚</option><option label="斯洛文尼亚" value="string:斯洛文尼亚">斯洛文尼亚</option><option label="南苏丹" value="string:南苏丹">南苏丹</option><option label="西班牙" value="string:西班牙">西班牙</option><option label="苏丹" value="string:苏丹">苏丹</option><option label="瑞士" value="string:瑞士">瑞士</option><option label="土耳其" value="string:土耳其">土耳其</option><option label="乌克兰" value="string:乌克兰">乌克兰</option><option label="英国" value="string:英国">英国</option><option label="美国" value="string:美国">美国</option></select>
-    </span>
-  </div>
-  <div class="col-sm-9 col-lg-6 player-index-header-filter-wrap hidden-sm">
-    <span class="select-moz-player-index">
-      <select class="player-index-header-filter ng-pristine ng-untouched ng-valid" name="team-filter" data-ng-model="$parent.team" data-ng-change="onTeamSelect()" data-ng-options=" team.value as ( team.display | earlyTeamChange:'name' ) for team in teams "><option label="根据球队查找" value="string:" selected="selected">根据球队查找</option><option label="老鹰" value="string:hawks">老鹰</option><option label="凯尔特人" value="string:celtics">凯尔特人</option><option label="篮网" value="string:nets">篮网</option><option label="黄蜂" value="string:hornets">黄蜂</option><option label="公牛" value="string:bulls">公牛</option><option label="骑士" value="string:cavaliers">骑士</option><option label="独行侠" value="string:mavericks">独行侠</option><option label="掘金" value="string:nuggets">掘金</option><option label="活塞" value="string:pistons">活塞</option><option label="勇士" value="string:warriors">勇士</option><option label="火箭" value="string:rockets">火箭</option><option label="步行者" value="string:pacers">步行者</option><option label="快船" value="string:clippers">快船</option><option label="湖人" value="string:lakers">湖人</option><option label="灰熊" value="string:grizzlies">灰熊</option><option label="热火" value="string:heat">热火</option><option label="雄鹿" value="string:bucks">雄鹿</option><option label="森林狼" value="string:timberwolves">森林狼</option><option label="鹈鹕" value="string:pelicans">鹈鹕</option><option label="尼克斯" value="string:knicks">尼克斯</option><option label="雷霆" value="string:thunder">雷霆</option><option label="魔术" value="string:magic">魔术</option><option label="76人" value="string:sixers">76人</option><option label="太阳" value="string:suns">太阳</option><option label="开拓者" value="string:blazers">开拓者</option><option label="国王" value="string:kings">国王</option><option label="马刺" value="string:spurs">马刺</option><option label="猛龙" value="string:raptors">猛龙</option><option label="爵士" value="string:jazz">爵士</option><option label="奇才" value="string:wizards">奇才</option></select>
-    </span>
-  </div>      
-</div>
-<div class="row sub-header-wrap player-index-header visible-sm ng-scope">
-  <div class="col-sm-9 col-lg-10 player-index-header-filter-wrap">
-    <span class="select-moz-player-index">
-      <select class="player-index-header-filter ng-pristine ng-untouched ng-valid" name="team-filter" data-ng-model="$parent.team" data-ng-change="onTeamSelect()" data-ng-options=" team.value as ( team.display | earlyTeamChange:'name' ) for team in teams "><option label="根据球队查找" value="string:" selected="selected">根据球队查找</option><option label="老鹰" value="string:hawks">老鹰</option><option label="凯尔特人" value="string:celtics">凯尔特人</option><option label="篮网" value="string:nets">篮网</option><option label="黄蜂" value="string:hornets">黄蜂</option><option label="公牛" value="string:bulls">公牛</option><option label="骑士" value="string:cavaliers">骑士</option><option label="独行侠" value="string:mavericks">独行侠</option><option label="掘金" value="string:nuggets">掘金</option><option label="活塞" value="string:pistons">活塞</option><option label="勇士" value="string:warriors">勇士</option><option label="火箭" value="string:rockets">火箭</option><option label="步行者" value="string:pacers">步行者</option><option label="快船" value="string:clippers">快船</option><option label="湖人" value="string:lakers">湖人</option><option label="灰熊" value="string:grizzlies">灰熊</option><option label="热火" value="string:heat">热火</option><option label="雄鹿" value="string:bucks">雄鹿</option><option label="森林狼" value="string:timberwolves">森林狼</option><option label="鹈鹕" value="string:pelicans">鹈鹕</option><option label="尼克斯" value="string:knicks">尼克斯</option><option label="雷霆" value="string:thunder">雷霆</option><option label="魔术" value="string:magic">魔术</option><option label="76人" value="string:sixers">76人</option><option label="太阳" value="string:suns">太阳</option><option label="开拓者" value="string:blazers">开拓者</option><option label="国王" value="string:kings">国王</option><option label="马刺" value="string:spurs">马刺</option><option label="猛龙" value="string:raptors">猛龙</option><option label="爵士" value="string:jazz">爵士</option><option label="奇才" value="string:wizards">奇才</option></select>
-    </span>
-  </div>
-</div></div>
-  </div> <!-- end sub-header-wrap -->
-  
-  <div data-ng-show="moduleLoading" class="preloader ng-hide">
-    <img src="/media/img/loader.gif"><br>
-  </div>
-
   <!-- ngIf: !moduleLoading --><div ng-if="!moduleLoading" class="ng-scope">
     <nba-stat-table rows="players" options="options" ai="showDoubleNameField" template="players/players-index" class="ng-isolate-scope"><div class="nba-stat-table" bindonce="">
   <div class="nba-stat-table__overflow" data-fixed="1" role="grid">
@@ -466,8 +290,6 @@
             </a>
             <a data-ng-href="/players/#!/ty-shon_alexander" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/ty-shon_alexander">
               <span class="ng-binding">泰肖恩</span>
-              <br>
-              <span class="ng-binding">亚历山大</span>
             </a>
           </td>
           <td class="nobr center bold ng-binding" data-ng-show="ai">Ty-Shon Alexander</td>
@@ -477,313 +299,6 @@
           <td class="nobr center bold ng-binding">88.5 公斤</td>
           <td class="nobr center bold hidden-sm ng-binding">0</td>
           <td class="nobr center bold hidden-sm ng-binding">美国</td>
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="6" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/nickeil_alexander-walker" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/nickeil_alexander-walker">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/1629638.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/nickeil_alexander-walker" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/nickeil_alexander-walker">
-              <span class="ng-binding">尼基尔</span>
-              <br>
-              <span class="ng-binding">亚历山大-沃克</span>
-            </a>
-          </td>
-          <td class="nobr center bold ng-binding" data-ng-show="ai">Nickeil Alexander-Walker</td>
-          <td class="nobr center bold"><a class="anchor-unstyled ng-binding ng-isolate-scope" data-ng-href="/teams/#!/pelicans" sib-team-urls="" team="row.teamProfile" target="_parent" href="/teams/#!/pelicans">鹈鹕</a></td>
-          <td class="nobr center bold ng-binding">后卫</td>
-          <td class="nobr center bold ng-binding">1.98</td>
-          <td class="nobr center bold ng-binding">93.0 公斤</td>
-          <td class="nobr center bold hidden-sm ng-binding">1</td>
-          <td class="nobr center bold hidden-sm ng-binding">加拿大</td>
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="7" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/grayson_allen" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/grayson_allen">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/1628960.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/grayson_allen" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/grayson_allen">
-              <span class="ng-binding">格雷森</span>
-              <br>
-              <span class="ng-binding">阿伦</span>
-            </a>
-          </td>
-          <td class="nobr center bold ng-binding" data-ng-show="ai">Grayson Allen</td>
-          <td class="nobr center bold"><a class="anchor-unstyled ng-binding ng-isolate-scope" data-ng-href="/teams/#!/grizzlies" sib-team-urls="" team="row.teamProfile" target="_parent" href="/teams/#!/grizzlies">灰熊</a></td>
-          <td class="nobr center bold ng-binding">后卫</td>
-          <td class="nobr center bold ng-binding">1.93</td>
-          <td class="nobr center bold ng-binding">89.8 公斤</td>
-          <td class="nobr center bold hidden-sm ng-binding">2</td>
-          <td class="nobr center bold hidden-sm ng-binding">美国</td>
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="8" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/jarrett_allen" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/jarrett_allen">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/1628386.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/jarrett_allen" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/jarrett_allen">
-              <span class="ng-binding">贾勒特</span>
-              <br>
-              <span class="ng-binding">阿伦</span>
-            </a>
-          </td>
-          <td class="nobr center bold ng-binding" data-ng-show="ai">Jarrett Allen</td>
-          <td class="nobr center bold"><a class="anchor-unstyled ng-binding ng-isolate-scope" data-ng-href="/teams/#!/cavaliers" sib-team-urls="" team="row.teamProfile" target="_parent" href="/teams/#!/cavaliers">骑士</a></td>
-          <td class="nobr center bold ng-binding">中锋</td>
-          <td class="nobr center bold ng-binding">2.11</td>
-          <td class="nobr center bold ng-binding">110.2 公斤</td>
-          <td class="nobr center bold hidden-sm ng-binding">3</td>
-          <td class="nobr center bold hidden-sm ng-binding">美国</td>
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="9" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/al-farouq_aminu" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/al-farouq_aminu">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/202329.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/al-farouq_aminu" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/al-farouq_aminu">
-              <span class="ng-binding">艾尔-法鲁克</span>
-              <br>
-              <span class="ng-binding">阿米奴</span>
-            </a>
-          </td>
-          <td class="nobr center bold ng-binding" data-ng-show="ai">Al-Farouq Aminu</td>
-          <td class="nobr center bold"><a class="anchor-unstyled ng-binding ng-isolate-scope" data-ng-href="/teams/#!/magic" sib-team-urls="" team="row.teamProfile" target="_parent" href="/teams/#!/magic">魔术</a></td>
-          <td class="nobr center bold ng-binding">前锋</td>
-          <td class="nobr center bold ng-binding">2.03</td>
-          <td class="nobr center bold ng-binding">99.8 公斤</td>
-          <td class="nobr center bold hidden-sm ng-binding">10</td>
-          <td class="nobr center bold hidden-sm ng-binding">美国</td>
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="10" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/kyle_anderson" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/kyle_anderson">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/203937.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/kyle_anderson" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/kyle_anderson">
-              <span class="ng-binding">凯尔</span>
-              <br>
-              <span class="ng-binding">安德森</span>
-            </a>
-          </td>
-          <td class="nobr center bold ng-binding" data-ng-show="ai">Kyle Anderson</td>
-          <td class="nobr center bold"><a class="anchor-unstyled ng-binding ng-isolate-scope" data-ng-href="/teams/#!/grizzlies" sib-team-urls="" team="row.teamProfile" target="_parent" href="/teams/#!/grizzlies">灰熊</a></td>
-          <td class="nobr center bold ng-binding">前锋-后卫</td>
-          <td class="nobr center bold ng-binding">2.06</td>
-          <td class="nobr center bold ng-binding">104.3 公斤</td>
-          <td class="nobr center bold hidden-sm ng-binding">6</td>
-          <td class="nobr center bold hidden-sm ng-binding">美国</td>
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="11" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/giannis_antetokounmpo" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/giannis_antetokounmpo">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/203507.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/giannis_antetokounmpo" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/giannis_antetokounmpo">
-              <span class="ng-binding">扬尼斯</span>
-              <br>
-              <span class="ng-binding">安特托昆博</span>
-            </a>
-          </td>
-          <td class="nobr center bold ng-binding" data-ng-show="ai">Giannis Antetokounmpo</td>
-          <td class="nobr center bold"><a class="anchor-unstyled ng-binding ng-isolate-scope" data-ng-href="/teams/#!/bucks" sib-team-urls="" team="row.teamProfile" target="_parent" href="/teams/#!/bucks">雄鹿</a></td>
-          <td class="nobr center bold ng-binding">前锋</td>
-          <td class="nobr center bold ng-binding">2.11</td>
-          <td class="nobr center bold ng-binding">109.8 公斤</td>
-          <td class="nobr center bold hidden-sm ng-binding">7</td>
-          <td class="nobr center bold hidden-sm ng-binding">希腊</td>
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="12" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/kostas_antetokounmpo" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/kostas_antetokounmpo">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/1628961.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/kostas_antetokounmpo" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/kostas_antetokounmpo">
-              <span class="ng-binding">科斯塔斯</span>
-              <br>
-              <span class="ng-binding">安特托昆博</span>
-            </a>
-          </td>
-          <td class="nobr center bold ng-binding" data-ng-show="ai">Kostas Antetokounmpo</td>
-          <td class="nobr center bold"><a class="anchor-unstyled ng-binding ng-isolate-scope" data-ng-href="/teams/#!/lakers" sib-team-urls="" team="row.teamProfile" target="_parent" href="/teams/#!/lakers">湖人</a></td>
-          <td class="nobr center bold ng-binding">前锋</td>
-          <td class="nobr center bold ng-binding">2.08</td>
-          <td class="nobr center bold ng-binding">90.7 公斤</td>
-          <td class="nobr center bold hidden-sm ng-binding">2</td>
-          <td class="nobr center bold hidden-sm ng-binding">希腊</td>
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="13" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/thanasis_antetokounmpo" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/thanasis_antetokounmpo">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/203648.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/thanasis_antetokounmpo" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/thanasis_antetokounmpo">
-              <span class="ng-binding">萨纳西斯</span>
-              <br>
-              <span class="ng-binding">安特托昆博</span>
-            </a>
-          </td>
-          <td class="nobr center bold ng-binding" data-ng-show="ai">Thanasis Antetokounmpo</td>
-          <td class="nobr center bold"><a class="anchor-unstyled ng-binding ng-isolate-scope" data-ng-href="/teams/#!/bucks" sib-team-urls="" team="row.teamProfile" target="_parent" href="/teams/#!/bucks">雄鹿</a></td>
-          <td class="nobr center bold ng-binding">前锋</td>
-          <td class="nobr center bold ng-binding">1.98</td>
-          <td class="nobr center bold ng-binding">99.3 公斤</td>
-          <td class="nobr center bold hidden-sm ng-binding">2</td>
-          <td class="nobr center bold hidden-sm ng-binding">希腊</td>
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="14" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/carmelo_anthony" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/carmelo_anthony">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/2546.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/carmelo_anthony" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/carmelo_anthony">
-              <span class="ng-binding">卡梅隆</span>
-              <br>
-              <span class="ng-binding">安东尼</span>
-            </a>
-          </td>
-          <td class="nobr center bold ng-binding" data-ng-show="ai">Carmelo Anthony</td>
-          <td class="nobr center bold"><a class="anchor-unstyled ng-binding ng-isolate-scope" data-ng-href="/teams/#!/blazers" sib-team-urls="" team="row.teamProfile" target="_parent" href="/teams/#!/blazers">开拓者</a></td>
-          <td class="nobr center bold ng-binding">前锋</td>
-          <td class="nobr center bold ng-binding">2.01</td>
-          <td class="nobr center bold ng-binding">108.0 公斤</td>
-          <td class="nobr center bold hidden-sm ng-binding">17</td>
-          <td class="nobr center bold hidden-sm ng-binding">美国</td>
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="15" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/cole_anthony" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/cole_anthony">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/1630175.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/cole_anthony" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/cole_anthony">
-              <span class="ng-binding">科尔</span>
-              <br>
-              <span class="ng-binding">安东尼</span>
-            </a>
-          </td>
-          <td class="nobr center bold ng-binding" data-ng-show="ai">Cole Anthony</td>
-          <td class="nobr center bold"><a class="anchor-unstyled ng-binding ng-isolate-scope" data-ng-href="/teams/#!/magic" sib-team-urls="" team="row.teamProfile" target="_parent" href="/teams/#!/magic">魔术</a></td>
-          <td class="nobr center bold ng-binding">后卫</td>
-          <td class="nobr center bold ng-binding">1.88</td>
-          <td class="nobr center bold ng-binding">83.9 公斤</td>
-          <td class="nobr center bold hidden-sm ng-binding">0</td>
-          <td class="nobr center bold hidden-sm ng-binding">美国</td>
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="16" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/og_anunoby" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/og_anunoby">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/1628384.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/og_anunoby" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/og_anunoby">
-              <span class="ng-binding">OG</span>
-              <br>
-              <span class="ng-binding">阿努诺比</span>
-            </a>
-          </td>
-          <td class="nobr center bold ng-binding" data-ng-show="ai">OG Anunoby</td>
-          <td class="nobr center bold"><a class="anchor-unstyled ng-binding ng-isolate-scope" data-ng-href="/teams/#!/raptors" sib-team-urls="" team="row.teamProfile" target="_parent" href="/teams/#!/raptors">猛龙</a></td>
-          <td class="nobr center bold ng-binding">前锋</td>
-          <td class="nobr center bold ng-binding">2.01</td>
-          <td class="nobr center bold ng-binding">105.2 公斤</td>
-          <td class="nobr center bold hidden-sm ng-binding">3</td>
-          <td class="nobr center bold hidden-sm ng-binding">英国</td>
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="17" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/ryan_arcidiacono" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/ryan_arcidiacono">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/1627853.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/ryan_arcidiacono" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/ryan_arcidiacono">
-              <span class="ng-binding">瑞安</span>
-              <br>
-              <span class="ng-binding">阿奇迪亚科诺</span>
-            </a>
-          </td>
-          <td class="nobr center bold ng-binding" data-ng-show="ai">Ryan Arcidiacono</td>
-          <td class="nobr center bold"><a class="anchor-unstyled ng-binding ng-isolate-scope" data-ng-href="/teams/#!/bulls" sib-team-urls="" team="row.teamProfile" target="_parent" href="/teams/#!/bulls">公牛</a></td>
-          <td class="nobr center bold ng-binding">后卫</td>
-          <td class="nobr center bold ng-binding">1.90</td>
-          <td class="nobr center bold ng-binding">88.5 公斤</td>
-          <td class="nobr center bold hidden-sm ng-binding">3</td>
-          <td class="nobr center bold hidden-sm ng-binding">美国</td>
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="18" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/trevor_ariza" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/trevor_ariza">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/2772.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/trevor_ariza" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/trevor_ariza">
-              <span class="ng-binding">特雷沃</span>
-              <br>
-              <span class="ng-binding">阿里扎</span>
-            </a>
-          </td>
-          <td class="nobr center bold ng-binding" data-ng-show="ai">Trevor Ariza</td>
-          <td class="nobr center bold"><a class="anchor-unstyled ng-binding ng-isolate-scope" data-ng-href="/teams/#!/thunder" sib-team-urls="" team="row.teamProfile" target="_parent" href="/teams/#!/thunder">雷霆</a></td>
-          <td class="nobr center bold ng-binding">前锋</td>
-          <td class="nobr center bold ng-binding">2.03</td>
-          <td class="nobr center bold ng-binding">97.5 公斤</td>
-          <td class="nobr center bold hidden-sm ng-binding">16</td>
-          <td class="nobr center bold hidden-sm ng-binding">美国</td>
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="19" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/d.j._augustin" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/d.j._augustin">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/201571.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/d.j._augustin" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/d.j._augustin">
-              <span class="ng-binding">DJ</span>
-              <br>
-              <span class="ng-binding">奥古斯丁</span>
-            </a>
-          </td>
-          <td class="nobr center bold ng-binding" data-ng-show="ai">D.J. Augustin</td>
-          <td class="nobr center bold"><a class="anchor-unstyled ng-binding ng-isolate-scope" data-ng-href="/teams/#!/bucks" sib-team-urls="" team="row.teamProfile" target="_parent" href="/teams/#!/bucks">雄鹿</a></td>
-          <td class="nobr center bold ng-binding">后卫</td>
-          <td class="nobr center bold ng-binding">1.80</td>
-          <td class="nobr center bold ng-binding">83.0 公斤</td>
-          <td class="nobr center bold hidden-sm ng-binding">12</td>
-          <td class="nobr center bold hidden-sm ng-binding">美国</td>
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="20" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/deni_avdija" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/deni_avdija">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/1630166.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/deni_avdija" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/deni_avdija">
-              <span class="ng-binding">德尼</span>
-              <br>
-              <span class="ng-binding">阿夫迪亚</span>
-            </a>
-          </td>
-          <td class="nobr center bold ng-binding" data-ng-show="ai">Deni Avdija</td>
-          <td class="nobr center bold"><a class="anchor-unstyled ng-binding ng-isolate-scope" data-ng-href="/teams/#!/wizards" sib-team-urls="" team="row.teamProfile" target="_parent" href="/teams/#!/wizards">奇才</a></td>
-          <td class="nobr center bold ng-binding">前锋</td>
-          <td class="nobr center bold ng-binding">2.06</td>
-          <td class="nobr center bold ng-binding">95.3 公斤</td>
-          <td class="nobr center bold hidden-sm ng-binding">0</td>
-          <td class="nobr center bold hidden-sm ng-binding">以色列</td>
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="21" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/deandre_ayton" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/deandre_ayton">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/1629028.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/deandre_ayton" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/deandre_ayton">
-              <span class="ng-binding">德安德烈</span>
-              <br>
-              <span class="ng-binding">艾顿</span>
-            </a>
-          </td>
-          <td class="nobr center bold ng-binding" data-ng-show="ai">Deandre Ayton</td>
-          <td class="nobr center bold"><a class="anchor-unstyled ng-binding ng-isolate-scope" data-ng-href="/teams/#!/suns" sib-team-urls="" team="row.teamProfile" target="_parent" href="/teams/#!/suns">太阳</a></td>
-          <td class="nobr center bold ng-binding">中锋</td>
-          <td class="nobr center bold ng-binding">2.11</td>
-          <td class="nobr center bold ng-binding">113.4 公斤</td>
-          <td class="nobr center bold hidden-sm ng-binding">2</td>
-          <td class="nobr center bold hidden-sm ng-binding">巴哈马</td>
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="22" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/udoka_azubuike" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/udoka_azubuike">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/1628962.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/udoka_azubuike" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/udoka_azubuike">
-              <span class="ng-binding">乌多卡</span>
-              <br>
-              <span class="ng-binding">阿祖布伊克</span>
-            </a>
-          </td>
-          <td class="nobr center bold ng-binding" data-ng-show="ai">Udoka Azubuike</td>
-          <td class="nobr center bold"><a class="anchor-unstyled ng-binding ng-isolate-scope" data-ng-href="/teams/#!/jazz" sib-team-urls="" team="row.teamProfile" target="_parent" href="/teams/#!/jazz">爵士</a></td>
-          <td class="nobr center bold ng-binding">中锋-前锋</td>
-          <td class="nobr center bold ng-binding">2.08</td>
-          <td class="nobr center bold ng-binding">127.0 公斤</td>
-          <td class="nobr center bold hidden-sm ng-binding">0</td>
-          <td class="nobr center bold hidden-sm ng-binding">尼日利亚</td>
-        </tr><!-- end ngRepeat: (i, row) in page -->
       </tbody>
     </table>
   </div> <!-- .stat-table__overflow -->
@@ -807,10 +322,8 @@
             <a data-ng-href="/players/#!/precious_achiuwa" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/precious_achiuwa">
               <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/1630173.png"></sib-img-player>
             </a>
-            <a data-ng-href="/players/#!/precious_achiuwa" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/precious_achiuwa">
-              <span class="ng-binding">普雷舍斯</span>
-              <br>
-              <span class="ng-binding">阿丘瓦</span>
+            <a data-ng-href="https://photonjams.gitee.io/gba/sufeng.html" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/precious_achiuwa">
+              <span class="ng-binding">段苏峰</span>
             </a>
           </td>
           
@@ -822,13 +335,11 @@
           
         </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="1" class="ng-scope">
           <td class="left player">
-            <a data-ng-href="/players/#!/jaylen_adams" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/jaylen_adams">
+            <a data-ng-href="https://photonjams.gitee.io/gba/yujing.html" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/jaylen_adams">
               <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/1629121.png"></sib-img-player>
             </a>
-            <a data-ng-href="/players/#!/jaylen_adams" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/jaylen_adams">
-              <span class="ng-binding">杰伦</span>
-              <br>
-              <span class="ng-binding">亚当斯</span>
+            <a data-ng-href="https://photonjams.gitee.io/gba/yujing.html" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/jaylen_adams">
+              <span class="ng-binding">何育瑾</span>
             </a>
           </td>
           
@@ -840,13 +351,11 @@
           
         </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="2" class="ng-scope">
           <td class="left player">
-            <a data-ng-href="/players/#!/steven_adams" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/steven_adams">
+            <a data-ng-href="https://photonjams.gitee.io/gba/guobang.html" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/steven_adams">
               <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/203500.png"></sib-img-player>
             </a>
-            <a data-ng-href="/players/#!/steven_adams" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/steven_adams">
-              <span class="ng-binding">史蒂文</span>
-              <br>
-              <span class="ng-binding">亚当斯</span>
+            <a data-ng-href="https://photonjams.gitee.io/gba/guobang.html" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/steven_adams">
+              <span class="ng-binding">郭泽邦</span>
             </a>
           </td>
           
@@ -858,13 +367,11 @@
           
         </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="3" class="ng-scope">
           <td class="left player">
-            <a data-ng-href="/players/#!/bam_adebayo" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/bam_adebayo">
+            <a data-ng-href="https://photonjams.gitee.io/gba/zhaojiao.html" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/bam_adebayo">
               <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/1628389.png"></sib-img-player>
             </a>
-            <a data-ng-href="/players/#!/bam_adebayo" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/bam_adebayo">
-              <span class="ng-binding">巴姆</span>
-              <br>
-              <span class="ng-binding">阿德巴约</span>
+            <a data-ng-href="https://photonjams.gitee.io/gba/zhaojiao.html" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/bam_adebayo">
+              <span class="ng-binding">曾昭宏</span>
             </a>
           </td>
           
@@ -876,13 +383,11 @@
           
         </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="4" class="ng-scope">
           <td class="left player">
-            <a data-ng-href="/players/#!/lamarcus_aldridge" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/lamarcus_aldridge">
+            <a data-ng-href="https://photonjams.gitee.io/gba/yuhao.html" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/lamarcus_aldridge">
               <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/200746.png"></sib-img-player>
             </a>
-            <a data-ng-href="/players/#!/lamarcus_aldridge" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/lamarcus_aldridge">
-              <span class="ng-binding">拉马库斯</span>
-              <br>
-              <span class="ng-binding">阿尔德里奇</span>
+            <a data-ng-href="https://photonjams.gitee.io/gba/yuhao.html" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/lamarcus_aldridge">
+              <span class="ng-binding">李宇豪</span>
             </a>
           </td>
           
@@ -903,321 +408,6 @@
               <span class="ng-binding">亚历山大</span>
             </a>
           </td>
-          
-          
-          
-          
-          
-          
-          
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="6" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/nickeil_alexander-walker" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/nickeil_alexander-walker">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/1629638.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/nickeil_alexander-walker" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/nickeil_alexander-walker">
-              <span class="ng-binding">尼基尔</span>
-              <br>
-              <span class="ng-binding">亚历山大-沃克</span>
-            </a>
-          </td>
-          
-          
-          
-          
-          
-          
-          
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="7" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/grayson_allen" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/grayson_allen">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/1628960.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/grayson_allen" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/grayson_allen">
-              <span class="ng-binding">格雷森</span>
-              <br>
-              <span class="ng-binding">阿伦</span>
-            </a>
-          </td>
-          
-          
-          
-          
-          
-          
-          
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="8" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/jarrett_allen" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/jarrett_allen">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/1628386.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/jarrett_allen" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/jarrett_allen">
-              <span class="ng-binding">贾勒特</span>
-              <br>
-              <span class="ng-binding">阿伦</span>
-            </a>
-          </td>
-          
-          
-          
-          
-          
-          
-          
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="9" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/al-farouq_aminu" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/al-farouq_aminu">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/202329.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/al-farouq_aminu" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/al-farouq_aminu">
-              <span class="ng-binding">艾尔-法鲁克</span>
-              <br>
-              <span class="ng-binding">阿米奴</span>
-            </a>
-          </td>
-          
-          
-          
-          
-          
-          
-          
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="10" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/kyle_anderson" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/kyle_anderson">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/203937.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/kyle_anderson" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/kyle_anderson">
-              <span class="ng-binding">凯尔</span>
-              <br>
-              <span class="ng-binding">安德森</span>
-            </a>
-          </td>
-          
-          
-          
-          
-          
-          
-          
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="11" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/giannis_antetokounmpo" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/giannis_antetokounmpo">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/203507.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/giannis_antetokounmpo" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/giannis_antetokounmpo">
-              <span class="ng-binding">扬尼斯</span>
-              <br>
-              <span class="ng-binding">安特托昆博</span>
-            </a>
-          </td>
-          
-          
-          
-          
-          
-          
-          
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="12" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/kostas_antetokounmpo" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/kostas_antetokounmpo">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/1628961.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/kostas_antetokounmpo" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/kostas_antetokounmpo">
-              <span class="ng-binding">科斯塔斯</span>
-              <br>
-              <span class="ng-binding">安特托昆博</span>
-            </a>
-          </td>
-          
-          
-          
-          
-          
-          
-          
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="13" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/thanasis_antetokounmpo" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/thanasis_antetokounmpo">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/203648.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/thanasis_antetokounmpo" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/thanasis_antetokounmpo">
-              <span class="ng-binding">萨纳西斯</span>
-              <br>
-              <span class="ng-binding">安特托昆博</span>
-            </a>
-          </td>
-          
-          
-          
-          
-          
-          
-          
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="14" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/carmelo_anthony" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/carmelo_anthony">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/2546.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/carmelo_anthony" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/carmelo_anthony">
-              <span class="ng-binding">卡梅隆</span>
-              <br>
-              <span class="ng-binding">安东尼</span>
-            </a>
-          </td>
-          
-          
-          
-          
-          
-          
-          
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="15" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/cole_anthony" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/cole_anthony">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/1630175.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/cole_anthony" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/cole_anthony">
-              <span class="ng-binding">科尔</span>
-              <br>
-              <span class="ng-binding">安东尼</span>
-            </a>
-          </td>
-          
-          
-          
-          
-          
-          
-          
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="16" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/og_anunoby" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/og_anunoby">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/1628384.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/og_anunoby" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/og_anunoby">
-              <span class="ng-binding">OG</span>
-              <br>
-              <span class="ng-binding">阿努诺比</span>
-            </a>
-          </td>
-          
-          
-          
-          
-          
-          
-          
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="17" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/ryan_arcidiacono" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/ryan_arcidiacono">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/1627853.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/ryan_arcidiacono" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/ryan_arcidiacono">
-              <span class="ng-binding">瑞安</span>
-              <br>
-              <span class="ng-binding">阿奇迪亚科诺</span>
-            </a>
-          </td>
-          
-          
-          
-          
-          
-          
-          
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="18" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/trevor_ariza" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/trevor_ariza">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/2772.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/trevor_ariza" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/trevor_ariza">
-              <span class="ng-binding">特雷沃</span>
-              <br>
-              <span class="ng-binding">阿里扎</span>
-            </a>
-          </td>
-          
-          
-          
-          
-          
-          
-          
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="19" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/d.j._augustin" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/d.j._augustin">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/201571.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/d.j._augustin" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/d.j._augustin">
-              <span class="ng-binding">DJ</span>
-              <br>
-              <span class="ng-binding">奥古斯丁</span>
-            </a>
-          </td>
-          
-          
-          
-          
-          
-          
-          
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="20" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/deni_avdija" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/deni_avdija">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/1630166.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/deni_avdija" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/deni_avdija">
-              <span class="ng-binding">德尼</span>
-              <br>
-              <span class="ng-binding">阿夫迪亚</span>
-            </a>
-          </td>
-          
-          
-          
-          
-          
-          
-          
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="21" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/deandre_ayton" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/deandre_ayton">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/1629028.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/deandre_ayton" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/deandre_ayton">
-              <span class="ng-binding">德安德烈</span>
-              <br>
-              <span class="ng-binding">艾顿</span>
-            </a>
-          </td>
-          
-          
-          
-          
-          
-          
-          
-        </tr><!-- end ngRepeat: (i, row) in page --><tr ng-repeat="(i, row) in page" index="22" class="ng-scope">
-          <td class="left player">
-            <a data-ng-href="/players/#!/udoka_azubuike" sib-player-urls="" team="row.teamProfile" class="player-headshot ng-isolate-scope" target="_parent" href="/players/#!/udoka_azubuike">
-              <sib-img-player class="player-img ng-isolate-scope" type="head" player-id="row.playerId" league-id="row.teamProfile.leagueId"><img class="player-img" alt="undefined" src="/media/img/players/head/260x190/1628962.png"></sib-img-player>
-            </a>
-            <a data-ng-href="/players/#!/udoka_azubuike" sib-player-urls="" team="row.teamProfile" class="player-name ng-isolate-scope" target="_parent" href="/players/#!/udoka_azubuike">
-              <span class="ng-binding">乌多卡</span>
-              <br>
-              <span class="ng-binding">阿祖布伊克</span>
-            </a>
-          </td>
-          
-          
-          
-          
-          
-          
-          
-        </tr><!-- end ngRepeat: (i, row) in page -->
-      </tbody>
     </table>
   </div></div> <!-- .nba-stat-table -->
 </nba-stat-table>
@@ -1303,7 +493,7 @@
               </div>
               <div class="tab-GBA-app">
                   <span>GBA官方应用</span>
-                  <img src="file:///D:/GBA%20Official/GBA%E4%B8%AD%E5%9B%BD%E5%AE%98%E6%96%B9%E7%BD%91%E7%AB%99%20_%20%E7%90%83%E5%91%98_files/footer-GBA-qrcode_689c63.png">
+                  <img src="file:///D:/GBA%20Official/GBA%E4%B8%AD%E5%9B%BD%E5%AE%98%E6%96%B9%E7%BD%91%E7%AB%99%20_%20%E7%90%83%E5%91%98_files/qrcode.png">
               </div>
           </div>
       </div>
