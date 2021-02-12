@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<!-- saved from url=(0160)file:///D:/GBA%20Official/%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE_GBA%E4%B8%AD%E5%9B%BD%E5%AE%98%E6%96%B9%E7%BD%91%E7%AB%99_files/licensee_widget_standings.html#!/ -->
+<html xmlns:ng="http://angularjs.org" lang="en" class=" js svg inlinesvg svgclippaths js svg inlinesvg svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><!--<![endif]--><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+     <!-- Font face import -->
+    <link href="./fontface.css" rel="stylesheet">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <title></title>
+    <link href="./libs.min.css" rel="stylesheet">
+    <link href="./custom.min.css" rel="stylesheet">
+	  <!--SSI /frags/licensee_scripts_header.html -->
+	  <!-- start licensee_widget_scripts_header  -->
+
+
+<!-- end licensee_widget_scripts_header  -->
+	
+    <!--[if IE]>
+      <link href="/styles/libs/font-awesome-ie7.min.css" rel="stylesheet">
+      
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      
+      <script src="/scripts/libs/es5-shim.min.js"></script>
+      <script src="/scripts/libs/es5-sham.min.js"></script>
+
+      <script>
+        document.createElement('sib-bar-chart');
+        document.createElement('sib-bar');
+        document.createElement('sib-fallback-src');
+        document.createElement('sib-hotzone-chart');
+        document.createElement('sib-img-player');
+        document.createElement('sib-img-team');
+        document.createElement('sib-playoff-scoreboard-slider');
+        document.createElement('sib-scoreboard-date');
+        document.createElement('sib-scoreboard-slider');
+        document.createElement('sib-social-icons');
+        document.createElement('sib-calendar');
+        document.createElement('sib-scores-calendar');
+        document.createElement('sib-team-twitter');
+        document.createElement('sib-playoff-bracket');
+        document.createElement('ng-pluralize');
+      </script>
+      <style>
+        .sib-table-container select {
+          background-image: none !important;
+        }
+        #player-index-search-label {
+          display: inline !important;
+        }
+        .sib-scoreboard .scoreboard .page .game .teams:hover .overlay{ display:block; }
+      </style>
+    <![endif]-->
+    <style type="text/css">
+      [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide {  display: none !important; }
+      .wf-loading { border-top: 0px solid #ffffff; }      
+    </style>  
+  </head>
+  <body data-ng-app="sib" id="ng:app" class="ng-app:sib ng-scope" style="">
+    <div data-ng-show="loading &amp;&amp; !errors.length" class="preloader ng-hide">
+        <img src="./loader.gif"><br>
+    </div>
+    <div id="app-container" class="" data-ng-hide="loading">
+      <div class="widget-container-outer" id="widget-container-outer">
+
+        <!-- Start widget-content -->
+         <!--SSI /widget/include/standings/index.html -->
+<div class="widget-container ng-isolate-scope" sib-iframe-notice="">
+  
+  <div class="" data-ng-hide="loading">
+    <!-- Start Widget -->
+    <section class="standings">
+  <div class="row">
+    <div>
+      
+      <!-- Table Start -->
+<div class="sib-table-container sib-table-league-standings ng-scope" data-ng-controller="StandingsController" data-sort-field="confRank" data-sort-direction="-1" data-deep-link="false" ng-class="{ singleConferenceLeague: ai.singleConferenceLeague }" ng-init="columnSet=&#39;standings&#39;;selected=&#39;Eastern&#39;;conferences=[{c:&#39;easternConf&#39;,v:&#39;Eastern&#39;},{c:&#39;westernConf&#39;,v:&#39;Western&#39;}];">
+
+  <div class="table-title desktop">
+    <div class="title">
+      <span>
+        <span class="ng-binding">2020-2021 常规赛</span>
+        <span data-ng-i18next="leagueStandings.title">leagueStandings.title</span>
+      </span>
+    </div>
+    <div class="table-toggle" ng-show="!ai.singleConferenceLeague">
+      <div data-ng-class="{toggled: ai.grouping==&#39;conference&#39;}" data-ng-click="ai.grouping=&#39;conference&#39;" data-adobe-value="conference" class="toggled"><span data-ng-i18next="_stats.CONF">_stats.CONF</span></div>
+      <div data-ng-class="{toggled: ai.grouping==&#39;division&#39;}" data-ng-click="ai.grouping=&#39;division&#39;" data-adobe-value="division"><span data-ng-i18next="_stats.DIV">_stats.DIV</span></div>
+    </div>
+    <div class="sib3-table-categories">
+      <div data-ng-class="{toggled: columnSet==&#39;standings&#39;}" data-ng-click="columnSet=&#39;standings&#39;" class="sib3-category toggled"><span data-ng-i18next="leagueStandings.standings">leagueStandings.standings</span></div>
+      <div data-ng-class="{toggled: columnSet==&#39;streaks&#39;}" data-ng-click="columnSet=&#39;streaks&#39;" class="sib3-category"><span data-ng-i18next="leagueStandings.streaksLast10">leagueStandings.streaksLast10</span></div>
+      <div data-ng-class="{toggled: columnSet==&#39;margin&#39;}" data-ng-click="columnSet=&#39;margin&#39;" class="sib3-category"><span data-ng-i18next="leagueStandings.marginStatistics">leagueStandings.marginStatistics</span></div>
+      <div data-ng-class="{toggled: columnSet==&#39;ahead&#39;}" data-ng-click="columnSet=&#39;ahead&#39;" class="sib3-category"><span data-ng-i18next="leagueStandings.aheadBehind">leagueStandings.aheadBehind</span></div>
+    </div>
+    <div class="sib3-table-conferences">
+      <div data-ng-class="{toggled: selectedConference==&#39;eastern&#39;}" data-ng-click="toggleConference(&#39;eastern&#39;)" class="sib3-conference"><span data-ng-i18next="_stats.easternConf">_stats.easternConf</span></div>
+      <div data-ng-class="{toggled: selectedConference==&#39;western&#39;}" data-ng-click="toggleConference(&#39;western&#39;)" class="sib3-conference"><span data-ng-i18next="_stats.westernConf">_stats.westernConf</span></div>
+    </div>
+  </div>
+
+  <div class="standings-group mobile" ng-show="!ai.singleConferenceLeague">
+    <a href="https://china.nba.com/articles/licensee_widget_standings.html" class="standings-group__toggle standings-group__toggle-conf toggled" ng-class="{ toggled: ai.grouping===&#39;conference&#39; }" data-ng-click="ai.grouping=&#39;conference&#39;" data-adobe-value="conference" target="_parent"><span data-ng-i18next="_stats.CONF">_stats.CONF</span>&nbsp;<span data-ng-i18next="leagueStandings.standings">leagueStandings.standings</span></a>
+    <a href="https://china.nba.com/articles/licensee_widget_standings.html" class="standings-group__toggle standings-group__toggle-div" ng-class="{ toggled: ai.grouping===&#39;division&#39; }" data-ng-click="ai.grouping=&#39;division&#39;" data-adobe-value="division" target="_parent"><span data-ng-i18next="_stats.DIV">_stats.DIV</span>&nbsp;<span data-ng-i18next="leagueStandings.standings">leagueStandings.standings</span></a>
+  </div>
+
+  <div class="standings-group mobile standings-group__border" ng-class="{ singleConferenceLeague: ai.singleConferenceLeague }">
+
+    <div>
+      <!-- ngRepeat: conf in conferences --><!-- ngIf: !ai.singleConferenceLeague --><!-- ngRepeat: conf in conferences --><!-- ngIf: !ai.singleConferenceLeague --><div class="standings-group__wrapper ng-scope" ng-repeat="conf in conferences" data-ng-click="updateConf(conf.v)" ng-if="!ai.singleConferenceLeague">
+        <a href="https://china.nba.com/articles/licensee_widget_standings.html" class="standings-group__select standings-group__select-conf toggled" ng-class="{ toggled: selected===conf.v }" target="_parent">
+          <!-- <img data-ng-src="/media/img/{{ conf.v | lowercase }}_logo.png" alt="{{ conf.v | lowercase }}" /> -->
+          <span data-ng-i18next="_stats.easternConf">_stats.easternConf</span>
+        </a>
+      </div><!-- end ngIf: !ai.singleConferenceLeague --><!-- end ngRepeat: conf in conferences --><!-- ngIf: !ai.singleConferenceLeague --><div class="standings-group__wrapper ng-scope" ng-repeat="conf in conferences" data-ng-click="updateConf(conf.v)" ng-if="!ai.singleConferenceLeague">
+        <a href="https://china.nba.com/articles/licensee_widget_standings.html" class="standings-group__select standings-group__select-conf toggled" ng-class="{ toggled: selected===conf.v }" target="_parent">
+          <!-- <img data-ng-src="/media/img/{{ conf.v | lowercase }}_logo.png" alt="{{ conf.v | lowercase }}" /> -->
+          <span data-ng-i18next="_stats.easternConf">_stats.easternConf</span>
+        </a>
+      </div><!-- end ngIf: !ai.singleConferenceLeague --><!-- end ngRepeat: conf in conferences --><!-- end ngIf: !ai.singleConferenceLeague --><!-- end ngRepeat: conf in conferences --><!-- ngIf: !ai.singleConferenceLeague --><!-- ngRepeat: conf in conferences --><!-- ngIf: !ai.singleConferenceLeague --><div class="standings-group__wrapper ng-scope" ng-repeat="conf in conferences" data-ng-click="updateConf(conf.v)" ng-if="!ai.singleConferenceLeague">
+        <a href="https://china.nba.com/articles/licensee_widget_standings.html" class="standings-group__select standings-group__select-conf toggled" ng-class="{ toggled: selected===conf.v }" target="_parent">
+          <!-- <img data-ng-src="/media/img/{{ conf.v | lowercase }}_logo.png" alt="{{ conf.v | lowercase }}" /> -->
+          <span data-ng-i18next="_stats.westernConf">_stats.westernConf</span>
+        </a>
+      </div><!-- end ngIf: !ai.singleConferenceLeague --><!-- end ngRepeat: conf in conferences --><!-- ngIf: !ai.singleConferenceLeague --><div class="standings-group__wrapper ng-scope" ng-repeat="conf in conferences" data-ng-click="updateConf(conf.v)" ng-if="!ai.singleConferenceLeague">
+        <a href="https://china.nba.com/articles/licensee_widget_standings.html" class="standings-group__select standings-group__select-conf" ng-class="{ toggled: selected===conf.v }" target="_parent">
+          <!-- <img data-ng-src="/media/img/{{ conf.v | lowercase }}_logo.png" alt="{{ conf.v | lowercase }}" /> -->
+          <span data-ng-i18next="_stats.westernConf">_stats.westernConf</span>
+        </a>
+      </div><!-- end ngIf: !ai.singleConferenceLeague --><!-- end ngRepeat: conf in conferences --><!-- end ngIf: !ai.singleConferenceLeague --><!-- end ngRepeat: conf in conferences -->
+
+      <!-- ngIf: ai.singleConferenceLeague -->
+    </div>
+
+  </div>
+
+  <div data-ng-show="moduleLoading" class="preloader ng-hide">
+    <img src="./loader.gif"><br>
+  </div>
+
+  <div class="standings-tables">
+    <div data-ng-show="loading" class="preloader" style="">
+      <img src="./loader.gif"><br>
+    </div>
+
+    <div class="mobile">
+      <!-- ngRepeat: group in groups --><!-- ngIf: (selected===group.conference || ai.singleConferenceLeague) && !loading --><!-- ngRepeat: group in groups --><!-- end ngIf: (selected===group.conference || ai.singleConferenceLeague) && !loading --><!-- end ngRepeat: group in groups --><!-- ngIf: (selected===group.conference || ai.singleConferenceLeague) && !loading --><!-- end ngRepeat: group in groups -->
+    </div>
+
+    <!-- ngIf: columnSet==='standings' && !loading --><!-- ngIf: columnSet==='standings' && !loading --><!-- end ngIf: columnSet==='standings' && !loading -->
+
+    <!-- ngIf: columnSet==='streaks' && !loading -->
+
+    <!-- ngIf: columnSet==='margin' && !loading -->
+
+    <!-- ngIf: columnSet==='ahead' && !loading -->
+  </div>
+</div>
+<!-- Table End -->
+    </div>
+  </div>
+
+  <div class="row standings-glossary-container">
+    <div>
+      <!-- Standings Glossary Module Start -->
+<div class="sib-standings-glossary standings-glossary ng-scope" data-ng-controller="StandingsGlossaryCtrl">
+  <div ng-hide="showVersionTwo" class="">
+    <div class="playoff-legend">
+  <div class="playoff-legend-row">
+    <span class="legend-icon">x</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.clinchedPlayoffsBerth">standingsGlossary.clinchedPlayoffsBerth</span> | </span><span class="legend-icon">e</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.clinchedEasternConference">standingsGlossary.clinchedEasternConference</span> | </span><span class="legend-icon">a</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.clinchedAtlanticDivision">standingsGlossary.clinchedAtlanticDivision</span> | </span><span class="legend-icon">c</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.clinchedCentralDivision">standingsGlossary.clinchedCentralDivision</span></span>
+  </div>
+  <div class="playoff-legend-row">
+    <span class="legend-icon">se</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.clinchedSoutheastDivision">standingsGlossary.clinchedSoutheastDivision</span> | </span><span class="legend-icon">w</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.clinchedWesternConference">standingsGlossary.clinchedWesternConference</span> | </span><span class="legend-icon">sw</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.clinchedSouthwestDivision">standingsGlossary.clinchedSouthwestDivision</span></span>
+  </div>
+  <div class="playoff-legend-row">
+    <span class="legend-icon">nw</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.clinchedNorthwestDivision">standingsGlossary.clinchedNorthwestDivision</span> | </span><span class="legend-icon">p</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.clinchedPacificDivision">standingsGlossary.clinchedPacificDivision</span> | </span><span class="legend-icon">o</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.eliminatedFromPlayoffs">standingsGlossary.eliminatedFromPlayoffs</span></span>
+  </div>
+  <!--<span class="rank-clinched-division">Clinched Division Title </span> 
+  <span class="rank-clinched-playoff">Clinched Playoff Berth </span> 
+  <span class="rank-eliminated">Eliminated from Playoffs </span> -->
+</div>
+
+<div class="clearfix"></div>
+
+
+<h5 class="playoff-info-toggle" data-ng-click="playoffinfo()"><span data-ng-i18next="standingsGlossary.tiebreakerBasis.headerTwo">standingsGlossary.tiebreakerBasis.headerTwo</span>: <i class="icon-caret-down" data-ng-show="playoff==&#39;hidden&#39;"></i><i class="icon-caret-up ng-hide" data-ng-show="playoff==&#39;expanded&#39;"></i></h5>
+<div class="tie-break ng-hide" data-ng-show="playoff==&#39;expanded&#39;">
+  <p><span data-ng-i18next="standingsGlossary.tiebreakerBasis.paragraphOne">standingsGlossary.tiebreakerBasis.paragraphOne</span></p>
+  <p><span data-ng-i18next="standingsGlossary.tiebreakerBasis.paragraphTwo">standingsGlossary.tiebreakerBasis.paragraphTwo</span></p>
+  <h6><span data-ng-i18next="standingsGlossary.tiebreakerBasis.headerThree">standingsGlossary.tiebreakerBasis.headerThree</span></h6>
+  <ol>
+    <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineNine">standingsGlossary.tiebreakerBasis.lineNine</span></li>
+    <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineTen">standingsGlossary.tiebreakerBasis.lineTen</span></li>
+    <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineEleven">standingsGlossary.tiebreakerBasis.lineEleven</span></li>
+    <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineTwelve">standingsGlossary.tiebreakerBasis.lineTwelve</span></li>
+    <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineThirteen">standingsGlossary.tiebreakerBasis.lineThirteen</span></li>
+    <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineFourteen">standingsGlossary.tiebreakerBasis.lineFourteen</span></li>
+  </ol>
+    
+  <h6><span data-ng-i18next="standingsGlossary.tiebreakerBasis.headerFour">standingsGlossary.tiebreakerBasis.headerFour</span></h6>
+  <ol>
+    <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineFifteen">standingsGlossary.tiebreakerBasis.lineFifteen</span></li>
+    <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineSixteen">standingsGlossary.tiebreakerBasis.lineSixteen</span></li>
+    <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineSeventeen">standingsGlossary.tiebreakerBasis.lineSeventeen</span></li>
+    <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineEighteen">standingsGlossary.tiebreakerBasis.lineEighteen</span></li>
+    <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineNineteen">standingsGlossary.tiebreakerBasis.lineNineteen</span></li>
+  </ol>
+    
+  <h6><span data-ng-i18next="standingsGlossary.tiebreakerBasis.headerFive">standingsGlossary.tiebreakerBasis.headerFive</span></h6>
+  <ol>
+    <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineTwenty">standingsGlossary.tiebreakerBasis.lineTwenty</span></li>
+    <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineTwentyOne">standingsGlossary.tiebreakerBasis.lineTwentyOne</span>
+        <ul class="list-unstyled">
+          <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineTwentyTwo">standingsGlossary.tiebreakerBasis.lineTwentyTwo</span></li>
+          <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineTwentyThree">standingsGlossary.tiebreakerBasis.lineTwentyThree</span></li>
+          <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineTwentyFour">standingsGlossary.tiebreakerBasis.lineTwentyFour</span></li>
+        </ul>
+    </li>
+    <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineTwentyFive">standingsGlossary.tiebreakerBasis.lineTwentyFive</span></li>
+  </ol>
+  
+  <h6><span data-ng-i18next="standingsGlossary.tiebreakerBasis.headerSix">standingsGlossary.tiebreakerBasis.headerSix</span></h6>
+  <p><span data-ng-i18next="standingsGlossary.tiebreakerBasis.paragraphThree">standingsGlossary.tiebreakerBasis.paragraphThree</span></p>
+    
+</div>  </div>
+  <div ng-show="showVersionTwo" class="ng-hide">
+    <div class="playoff-legend">
+  <div class="playoff-legend-row">
+    <span class="legend-icon">x</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.clinchedPlayoffsBerth">standingsGlossary.clinchedPlayoffsBerth</span> | </span><span class="legend-icon">e</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.clinchedEasternConference">standingsGlossary.clinchedEasternConference</span> | </span><span class="legend-icon">a</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.clinchedAtlanticDivision">standingsGlossary.clinchedAtlanticDivision</span> | </span><span class="legend-icon">c</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.clinchedCentralDivision">standingsGlossary.clinchedCentralDivision</span></span>
+  </div>
+  <div class="playoff-legend-row">
+    <span class="legend-icon">se</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.clinchedSoutheastDivision">standingsGlossary.clinchedSoutheastDivision</span> | </span><span class="legend-icon">w</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.clinchedWesternConference">standingsGlossary.clinchedWesternConference</span> | </span><span class="legend-icon">sw</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.clinchedSouthwestDivision">standingsGlossary.clinchedSouthwestDivision</span></span>
+  </div>
+  <div class="playoff-legend-row">
+    <span class="legend-icon">nw</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.clinchedNorthwestDivision">standingsGlossary.clinchedNorthwestDivision</span> | </span><span class="legend-icon">p</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.clinchedPacificDivision">standingsGlossary.clinchedPacificDivision</span> | </span><span class="legend-icon">o</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.eliminatedFromPlayoffs">standingsGlossary.eliminatedFromPlayoffs</span></span>
+  </div>
+  <!--<span class="rank-clinched-division">Clinched Division Title </span> 
+  <span class="rank-clinched-playoff">Clinched Playoff Berth </span> 
+  <span class="rank-eliminated">Eliminated from Playoffs </span> -->
+</div>
+
+<div class="clearfix"></div>
+
+<h5 class="playoff-info-toggle standings-glossary-header" data-ng-click="playoffinfo()"><span data-ng-i18next="standingsGlossary.tiebreakerBasis.headerTwo">standingsGlossary.tiebreakerBasis.headerTwo</span>: <i class="icon-caret-down" data-ng-show="playoff==&#39;hidden&#39;"></i><i class="icon-caret-up ng-hide" data-ng-show="playoff==&#39;expanded&#39;"></i></h5>
+
+
+<div data-ng-show="playoff===&#39;expanded&#39;" class="standings-glossary-desc ng-hide">
+  
+  <div>
+
+    <br>
+    
+    <p><strong data-ng-i18next="standingsGlossaryV2.tiebreakerBasisTwoWay.header">standingsGlossaryV2.tiebreakerBasisTwoWay.header</strong></p>
+    <ul class="standings-glossary-desc__list">
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisTwoWay.none">standingsGlossaryV2.tiebreakerBasisTwoWay.none</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisTwoWay.ruleOne">standingsGlossaryV2.tiebreakerBasisTwoWay.ruleOne</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisTwoWay.ruleTwo">standingsGlossaryV2.tiebreakerBasisTwoWay.ruleTwo</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisTwoWay.ruleThree">standingsGlossaryV2.tiebreakerBasisTwoWay.ruleThree</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisTwoWay.ruleFour">standingsGlossaryV2.tiebreakerBasisTwoWay.ruleFour</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisTwoWay.ruleFive">standingsGlossaryV2.tiebreakerBasisTwoWay.ruleFive</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisTwoWay.ruleSix">standingsGlossaryV2.tiebreakerBasisTwoWay.ruleSix</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisTwoWay.ruleSeven">standingsGlossaryV2.tiebreakerBasisTwoWay.ruleSeven</li>
+    </ul>
+
+    <br>
+
+    <p><strong data-ng-i18next="standingsGlossaryV2.tiebreakerBasisMultiWay.header">standingsGlossaryV2.tiebreakerBasisMultiWay.header</strong></p>
+    <ul class="standings-glossary-desc__list">
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisMultiWay.none">standingsGlossaryV2.tiebreakerBasisMultiWay.none</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisMultiWay.ruleOne">standingsGlossaryV2.tiebreakerBasisMultiWay.ruleOne</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisMultiWay.ruleTwo">standingsGlossaryV2.tiebreakerBasisMultiWay.ruleTwo</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisMultiWay.ruleThree">standingsGlossaryV2.tiebreakerBasisMultiWay.ruleThree</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisMultiWay.ruleFour">standingsGlossaryV2.tiebreakerBasisMultiWay.ruleFour</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisMultiWay.ruleFive">standingsGlossaryV2.tiebreakerBasisMultiWay.ruleFive</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisMultiWay.ruleSix">standingsGlossaryV2.tiebreakerBasisMultiWay.ruleSix</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisMultiWay.ruleSeven">standingsGlossaryV2.tiebreakerBasisMultiWay.ruleSeven</li>
+    </ul>
+
+    <br>
+
+    <p>
+      <strong data-ng-i18next="standingsGlossaryV2.strengthOfSchedule.header">standingsGlossaryV2.strengthOfSchedule.header</strong>
+      <br>
+      <span data-ng-i18next="standingsGlossaryV2.strengthOfSchedule.desc">standingsGlossaryV2.strengthOfSchedule.desc</span>
+    </p>
+
+  </div>
+
+  <div>
+    
+    <br>
+
+    <p><span data-ng-i18next="standingsGlossaryV2.tiebreakerBasisPlayoffs.header">standingsGlossaryV2.tiebreakerBasisPlayoffs.header</span></p>
+
+    <p><strong data-ng-i18next="standingsGlossaryV2.tiebreakerBasisPlayoffs.groupA.header">standingsGlossaryV2.tiebreakerBasisPlayoffs.groupA.header</strong></p>
+    <ul class="standings-glossary-desc__list">
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisPlayoffs.groupA.ruleOne">standingsGlossaryV2.tiebreakerBasisPlayoffs.groupA.ruleOne</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisPlayoffs.groupA.ruleTwo">standingsGlossaryV2.tiebreakerBasisPlayoffs.groupA.ruleTwo</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisPlayoffs.groupA.ruleThree">standingsGlossaryV2.tiebreakerBasisPlayoffs.groupA.ruleThree</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisPlayoffs.groupA.ruleFour">standingsGlossaryV2.tiebreakerBasisPlayoffs.groupA.ruleFour</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisPlayoffs.groupA.ruleFive">standingsGlossaryV2.tiebreakerBasisPlayoffs.groupA.ruleFive</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisPlayoffs.groupA.ruleSix">standingsGlossaryV2.tiebreakerBasisPlayoffs.groupA.ruleSix</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisPlayoffs.groupA.ruleSeven">standingsGlossaryV2.tiebreakerBasisPlayoffs.groupA.ruleSeven</li>
+    </ul>
+
+    <br>
+
+    <p><strong data-ng-i18next="standingsGlossaryV2.tiebreakerBasisPlayoffs.groupB.header">standingsGlossaryV2.tiebreakerBasisPlayoffs.groupB.header</strong></p>
+    <ul class="standings-glossary-desc__list">
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisPlayoffs.groupB.ruleOne">standingsGlossaryV2.tiebreakerBasisPlayoffs.groupB.ruleOne</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisPlayoffs.groupB.ruleTwo">standingsGlossaryV2.tiebreakerBasisPlayoffs.groupB.ruleTwo</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisPlayoffs.groupB.ruleThree">standingsGlossaryV2.tiebreakerBasisPlayoffs.groupB.ruleThree</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisPlayoffs.groupB.ruleFour">standingsGlossaryV2.tiebreakerBasisPlayoffs.groupB.ruleFour</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisPlayoffs.groupB.ruleFive">standingsGlossaryV2.tiebreakerBasisPlayoffs.groupB.ruleFive</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisPlayoffs.groupB.ruleSix">standingsGlossaryV2.tiebreakerBasisPlayoffs.groupB.ruleSix</li>
+    </ul>
+
+    <br>
+
+    <p><strong data-ng-i18next="standingsGlossaryV2.tiebreakerBasisPlayoffs.groupC.header">standingsGlossaryV2.tiebreakerBasisPlayoffs.groupC.header</strong></p>
+    <ul class="standings-glossary-desc__list">
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisPlayoffs.groupC.ruleOneA">standingsGlossaryV2.tiebreakerBasisPlayoffs.groupC.ruleOneA</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisPlayoffs.groupC.ruleOneB">standingsGlossaryV2.tiebreakerBasisPlayoffs.groupC.ruleOneB</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisPlayoffs.groupC.ruleTwo">standingsGlossaryV2.tiebreakerBasisPlayoffs.groupC.ruleTwo</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisPlayoffs.groupC.ruleTwoA">standingsGlossaryV2.tiebreakerBasisPlayoffs.groupC.ruleTwoA</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisPlayoffs.groupC.ruleTwoOr">standingsGlossaryV2.tiebreakerBasisPlayoffs.groupC.ruleTwoOr</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisPlayoffs.groupC.ruleTwoB">standingsGlossaryV2.tiebreakerBasisPlayoffs.groupC.ruleTwoB</li>
+      <li data-ng-i18next="standingsGlossaryV2.tiebreakerBasisPlayoffs.groupC.ruleThree">standingsGlossaryV2.tiebreakerBasisPlayoffs.groupC.ruleThree</li>
+    </ul>
+
+  </div>
+
+  <div>
+    
+    <br>
+
+    <p><strong data-ng-i18next="standingsGlossaryV2.howManyTeamsPlayoffs.header">standingsGlossaryV2.howManyTeamsPlayoffs.header</strong></p>
+
+    <p><span data-ng-i18next="standingsGlossaryV2.howManyTeamsPlayoffs.lineOne">standingsGlossaryV2.howManyTeamsPlayoffs.lineOne</span></p>
+    <p><span data-ng-i18next="standingsGlossaryV2.howManyTeamsPlayoffs.lineTwo">standingsGlossaryV2.howManyTeamsPlayoffs.lineTwo</span></p>
+    <p><span data-ng-i18next="standingsGlossaryV2.howManyTeamsPlayoffs.lineThree">standingsGlossaryV2.howManyTeamsPlayoffs.lineThree</span></p>
+    
+
+  </div>
+
+</div>  </div>
+</div>
+<!-- Standings Glossary Module End -->    </div>
+  </div>
+</section>
+
+    <!-- End Widget -->
+  </div>
+</div>
+<!-- .widget-container -->
+        <!-- End widget-content -->
+        
+      </div> <!-- /container -->
+    </div> <!-- /app-container -->
+    <script>
+    // IE console.log fix
+    if (!window.console) {
+      console = {log: function() {}};
+    }
+    </script>
+
+      
+    <script src="./libs.min.js.下载"></script>
+    <script src="./custom.min.js.下载"></script>
+
+    <!--[if lt IE 9]>
+      <script src="/scripts/lib/json3.min.js"></script>
+      <script src="/scripts/lib/ieshiv.js"></script>
+    <![endif]-->
+            
+                                           
+     <!--SSI /frags/licensee_widget_scripts_footer.html -->
+<script type="text/javascript">
+  angular.element('a').attr('target','_parent');
+</script>
+<style>
+body {
+  background-image:none !important;
+}
+/*General site specific css show or hide
+  1) Leverages specificity to override boostrap and custom show-all-sites, hidden-all-sites
+  1a) Multiple classes should be present on the parent element
+  2) Expects a dedicated parent element to control the display of the children for a given site
+  3) Assumes display value as default to reduce the number of combinations
+     - divs should be block
+     - spans should be inline
+ */
+  div.show-all-sites.hidden-cn,
+  div.visible-sm.hidden-cn-sm,
+  div.visible-md.hidden-cn-md,
+  div.visible-lg.hidden-cn-lg  {display: none!important;}
+
+
+  div.hidden-all-sites.show-cn,
+  div.hidden-sm.show-cn-sm,
+  div.hidden-md.show-cn-md,
+  div.hidden-lg.show-cn-lg  {display: block!important;}
+
+  span.show-all-sites.hidden-cn,
+  span.visible-sm.hidden-cn-sm,
+  span.visible-md.hidden-cn-md,
+  span.visible-lg.hidden-cn-lg  {display: none!important;}
+
+  span.hidden-all-sites.show-cn,
+  span.hidden-sm.show-cn-sm,
+  span.hidden-md.show-cn-md,
+  span.hidden-lg.show-cn-lg  {display: inline!important;}
+</style>
+   
+  
+</body></html>

